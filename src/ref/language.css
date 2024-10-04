@@ -1,0 +1,53 @@
+/*--- language change ---*/
+
+#container[lang="en"] span:lang(de) {
+    display: none !important;
+}
+#container[lang="de"] span:lang(en) {            
+    display: none !important;
+}
+
+/* hide radio */
+#langChange input[type="radio"] {
+    position: absolute;
+    left: -200em;
+}
+
+/* styling the div and labels */
+#langChange {
+    position: absolute;
+    left: 0;
+}
+#langChange label {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    padding: .5em;
+    color: #3b5998;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    background: #ccc;
+    border-radius: 0 .4em .4em 0;
+    cursor: pointer;
+}
+#langChange label~label {
+    top: 60px;
+}
+#langChange input[type="radio"]:checked + label {
+    color: white;
+    background: #3b5998;
+}
+#langChange label[for="toEn"]:after {
+    content: "english";
+}
+#langChange label[for="toDe"]:after {
+    content: "deutsch";
+}
+
+@media (max-width: 1199px) {
+    #langChange label[for="toEn"]:after {
+        content: "en";
+    }
+    #langChange label[for="toDe"]:after {
+        content: "de";
+    }
+}
