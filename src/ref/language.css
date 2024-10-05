@@ -20,7 +20,7 @@
 }
 #langChange label {
     position: absolute;
-    top: 20px;
+    top: 8rem; // 20px
     left: 0;
     padding: .5em;
     color: #3b5998;
@@ -30,7 +30,7 @@
     cursor: pointer;
 }
 #langChange label~label {
-    top: 60px;
+    top: 11rem;
 }
 #langChange input[type="radio"]:checked + label {
     color: white;
