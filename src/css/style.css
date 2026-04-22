@@ -1,0 +1,154 @@
+html {
+    scroll-snap-type: y proximity;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.head {
+    height: 100%;
+    text-align: center;
+    background-image: url(../img/background_3_resize.jpg);
+    background-size: cover;
+    filter: brightness(0.85);
+    background-position: center;
+}
+
+.container {
+    margin: 10vh auto 0 auto;
+    width: 63%;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    min-height: 90vh;
+}
+
+.slider {
+    display: flex;
+}
+
+.image {
+    height: 300px;
+    width: 300px;
+    margin: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 5rem;
+}
+
+.spacer {
+    width: 100%;
+    height: 2em;
+}
+
+.slider > .orient {
+    width: 50%;
+}
+
+.orient.left {
+    text-align: left;
+    margin-right: auto;
+}
+
+.orient.right {
+    text-align: right;
+    margin-left: auto;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE */
+    user-select: none;
+}
+
+.f {
+    font-family: 'Open Sans', Lato, Arial;
+}
+
+.hat{ 
+    color: black;
+    font-size: 3rem;
+    font-weight: 390;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+
+.pullover {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 200;
+    line-height: 1.4;
+}
+  
+.shirt {
+    color: rgba(33,33,33,1.0);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6667;
+}
+
+.small {
+    font-size: 2rem !important;
+}
+  
+@media (max-width: 1079px) {
+    html {
+        scroll-snap-type: none;
+    }    
+
+    body {
+        zoom: 2;
+    }
+
+    .container {
+        width: 80%;
+        margin: auto;
+        padding-top: 10%;
+        min-height: unset;
+    }
+
+    .slider {
+        display: block !important;
+    }
+
+    .image {
+        width: 100%;
+        aspect-ratio: 1;
+        margin-right: 0;
+        margin-bottom: 10%;
+        min-height: 25rem;
+    }
+
+    .slider[vp="mobile"] {
+        display: inline-flex;
+    }
+
+    .slider > .orient {
+        width: 100%;
+    }
+
+    .shift {
+        margin: 0 !important;
+    }
+}
