@@ -113,7 +113,8 @@ body {
         aspect-ratio: 1;
         margin-right: 0;
         margin-bottom: 10%;
-        min-height: 25rem;
+        min-height: 20vh;
+        background-position: center;
     }
 
     .slider > .orient {
